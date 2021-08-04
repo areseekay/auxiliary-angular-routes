@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+}
+button {
+  padding: 10px;
+  border-radius: 4px;
+  background-color: orangered;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.split-view {
+  display: flex;
+  justify-content: space-around;
+}
+
+.side {
+  width: 45%;
+}
+

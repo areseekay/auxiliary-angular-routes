@@ -1,0 +1,21 @@
+<h1>Task view of Home</h1>
+<p>This could be a task view, which is held as direct child of the home-component. So it uses the same Router as the
+  parent or app.component and is loaded eagerly. It has as well a named router-outlet 'task-list' to render the task
+  list component inside the task view via router.</p>
+
+<p>This can be convenient, if you like to display different components at the same place inside a component, without
+  using complex concept as dynamic resolver. For demo purposes, you find two buttons to switch the component.</p>
+
+<a [routerLink]="[{outlets: {'subView': 'tasks'}}]" [skipLocationChange]="true" class="center">
+  <button>Show Task list
+  </button>
+</a>
+<a [routerLink]="[{outlets: {'subView': 'cat'}}]" [skipLocationChange]="true" class="center">
+  <button>Show a cat
+  </button>
+</a>
+
+
+<!--
+<router-outlet name="subView"></router-outlet>
+-->

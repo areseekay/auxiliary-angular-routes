@@ -1,0 +1,22 @@
+<h1>This is the Lazy Child Home</h1>
+<p>This Component/Module was loaded as lazy module -> https://angular.io/guide/lazy-loading-ngmodules. It has it's own
+  Router Outlet and structure. But still it can
+  have named router outlets, which behave similar to a named outlet in a usual loaded module.
+  You find two separate router-outlets 'left' and 'right' (check it out via dev-tools of your browser). Once you click
+  on the following buttons, you see in
+  action where it will render the content</p>
+
+<a [routerLink]="[{outlets: {'left': 'left', 'right': 'right'}}]" [skipLocationChange]="true" class="center">
+  <button>Show Content same time on
+    both sides
+  </button>
+</a>
+
+<div class="split-view">
+  <div class="side">
+    <router-outlet name="left"></router-outlet>
+  </div>
+  <div class="side">
+    <router-outlet name="right"></router-outlet>
+  </div>
+</div>

@@ -1,6 +1,10 @@
-<!--<a [routerLink]="'/left'">left</a>
-<a [routerLink]="'/right'">right</a>-->
-<!--<a [routerLink]="['/', {outlets: {'right': ['right']}}]">right again</a>-->
-<h1>home home</h1>
-<a [routerLink]="'/split'">Split</a>
-<router-outlet></router-outlet>
+<div class="navigation">
+  <a [routerLink]="'/'">Home</a>
+  <a [routerLink]="[{outlets: {'easyOutlet': 'easy'}}]">Just Easy</a>
+  <a [routerLink]="'/taskView'">Task View</a>
+  <a [routerLink]="'/split'">Split</a>
+</div>
+<div class="frame">
+  <router-outlet></router-outlet>
+  <router-outlet name="easyOutlet"></router-outlet>
+</div>

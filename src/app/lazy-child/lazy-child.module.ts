@@ -19,4 +19,4 @@ import { ChildRightComponent } from './child-right/child-right.component';
     RouterModule.forChild(CHILD_ROUTES)
   ]
 })
-export class ChildModule { }
+export class LazyChildModule { }
