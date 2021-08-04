@@ -7,7 +7,9 @@ export const CHILD_ROUTES: Routes = [
   {
     path: '', component: ChildComponent, children: [
       {path: 'left', component: ChildLeftComponent, outlet: 'left'},
-      {path: 'right', component: ChildRightComponent, outlet: 'right'}
+      {path: 'left', component: ChildLeftComponent, outlet: 'right'},
+      {path: 'right', component: ChildRightComponent, outlet: 'right'},
+      {path: 'right', component: ChildRightComponent, outlet: 'left'}
     ]
   },
 ]

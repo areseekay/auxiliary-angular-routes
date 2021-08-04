@@ -6,11 +6,15 @@
   on the following buttons, you see in
   action where it will render the content</p>
 
-<a [routerLink]="[{outlets: {'left': 'left', 'right': 'right'}}]" [skipLocationChange]="true" class="center">
+<a [routerLink]="[ '/lazyChild', {outlets: {'left': 'left', 'right': 'right'}}]" [skipLocationChange]="true" class="center">
   <button>Show Content same time on
     both sides
   </button>
 </a>
+<div class="center">
+  <button (click)="switchContent()" class="center">Switch content
+  </button>
+</div>
 
 <div class="split-view">
   <div class="side">

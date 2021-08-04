@@ -1,14 +1,12 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from "@angular/router";
-import {HomeComponent} from "./home/home.component";
-import {CatComponent} from "./home/task-view/cat/cat.component";
-import {TaskListComponent} from "./home/task-view/task-list/task-list.component";
-import {TaskViewComponent} from "./home/task-view/task-view.component";
 import {EasyComponent} from "./easy/easy.component";
+import {TaskViewComponent} from "./task-view/task-view.component";
+import {CatComponent} from "./task-view/cat/cat.component";
+import {TaskListComponent} from "./task-view/task-list/task-list.component";
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
   {
     path: 'taskView', component: TaskViewComponent, children: [
       {path: 'cat', component: CatComponent, outlet: 'subView'},
@@ -16,7 +14,7 @@ const routes: Routes = [
     ]
   },
   {path: 'easy', component: EasyComponent, outlet: 'easyOutlet'},
-  {path: 'split', loadChildren: () => import("./lazy-child/lazy-child.module").then(module => module.LazyChildModule)},
+  {path: 'lazyChild', loadChildren: () => import("./lazy-child/lazy-child.module").then(module => module.LazyChildModule)},
 ];
 
 @NgModule({

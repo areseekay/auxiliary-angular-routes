@@ -6,8 +6,6 @@ import {RouterModule} from "@angular/router";
 import {CHILD_ROUTES} from "./child.routes";
 import { ChildRightComponent } from './child-right/child-right.component';
 
-
-
 @NgModule({
   declarations: [
     ChildComponent,
